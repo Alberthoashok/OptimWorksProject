@@ -1,0 +1,136 @@
+/* General Page Styling */
+.cart-page {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 20px 20px;
+  background: #f8f9fa;
+  font-family: "Arial", sans-serif;
+}
+
+/* Back Button */
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: #007bff;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.back-button:hover {
+  background: #0056b3;
+}
+
+/* Cart Title */
+.cart-title {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Cart List */
+.cart-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Individual Cart Item */
+.cart-item {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.cart-item:hover {
+  transform: scale(1.02);
+}
+
+/* Cart Item Image */
+.cart-item-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+
+/* Cart Item Details */
+.cart-item-details {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cart Item Title */
+.cart-item-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+/* Cart Item Price */
+.cart-item-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #28a745;
+  margin-bottom: 10px;
+}
+
+/* Cart Item Buttons */
+.cart-item-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Remove & Buy Buttons */
+.cart-button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Remove Button */
+.cart-button.remove {
+  background: #dc3545;
+  color: white;
+}
+
+.cart-button.remove:hover {
+  background: #c82333;
+}
+
+/* Buy Now Button */
+.cart-button.buy {
+  background: #28a745;
+  color: white;
+}
+
+.cart-button.buy:hover {
+  background: #218838;
+}
+
+/* Empty Cart Message */
+.cart-empty {
+  font-size: 18px;
+  color: #777;
+  text-align: center;
+  margin-top: 20px;
+}
