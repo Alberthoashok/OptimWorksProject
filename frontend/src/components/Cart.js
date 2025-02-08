@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import "./Cart.css"; 
+import "./Cart.css";
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -35,11 +35,11 @@ const Cart = () => {
 
   return (
     <div className="cart-page">
-      <button className="back-button" onClick={() => navigate("/productslist")}>
+      <button className="back-button" onClick={() => navigate("/products")}>
         ← Back
       </button>
 
-      <h2 className="cart-title">🛒 Your Cart</h2>
+      <h2 className="cart-title">Your Cart</h2>
       <ul className="cart-list">
         {cartItems.length > 0 ? (
           cartItems.map((item) => (

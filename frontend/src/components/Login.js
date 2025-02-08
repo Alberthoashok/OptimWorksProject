@@ -23,6 +23,7 @@ const Login = () => {
         : `${credentials.username}456`;
 
     if (credentials.password === correctPassword) {
+      localStorage.setItem("role", role);
       navigate(role === "vendor" ? "/venderProducts" : "/products");
     } else {
       alert("Invalid username or password!");
@@ -32,7 +33,6 @@ const Login = () => {
   return (
     <div className="login-container">
       <h2>Login</h2>
-
       <form onSubmit={handleSubmit} className="login-form">
         <select
           className="role-select"
@@ -41,7 +41,6 @@ const Login = () => {
           <option value="user">User</option>
           <option value="vendor">Vendor</option>
         </select>
-
         <input
           type="text"
           name="username"
@@ -50,7 +49,6 @@ const Login = () => {
           onChange={handleChange}
           required
         />
-
         <input
           type="password"
           name="password"
@@ -59,7 +57,6 @@ const Login = () => {
           onChange={handleChange}
           required
         />
-
         <button type="submit" className="login-button">
           Login
         </button>

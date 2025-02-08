@@ -39,7 +39,7 @@ const VenderProducts = () => {
       </div>
 
       <div className="product-list-wrapper">
-        <h2 className="product-list-title">Products</h2>
+        <h2 className="product-list-title">Recently Added Products</h2>
         <ul className="product-list">
           {products.length > 0 ? (
             products.map((product) => (

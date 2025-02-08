@@ -28,7 +28,7 @@ const ProductList = () => {
   return (
     <div className="product-page">
       <div className="header">
-        <h1 className="page-title">Available Products</h1>
+        <h1 className="page-title">ShopKaroo</h1>
         <div className="header-buttons">
           <button onClick={() => navigate("/cart")} className="cart-button">
             Cart

@@ -1,11 +1,21 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./ProductDetails.css";
 
 const ProductDetails = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
+  const navigate = useNavigate();
+
+  const handleBack = () => {
+    const role = localStorage.getItem("role");
+    if (role === "vendor") {
+      navigate("/venderProducts");
+    } else {
+      navigate("/products");
+    }
+  };
 
   useEffect(() => {
     axios
@@ -18,6 +28,9 @@ const ProductDetails = () => {
 
   return product ? (
     <div className="product-detail-container">
+      <button className="back-button" onClick={handleBack}>
+        Back
+      </button>
       <div className="product-card">
         <img
           src={`http://localhost:3001/${product.image}`}
